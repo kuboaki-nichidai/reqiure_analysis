@@ -1,0 +1,98 @@
+:linkcss:
+:stylesdir: css
+:stylesheet: mystyle.css
+:twoinches: width='360'
+:full-width: width='100%'
+:three-quarters-width: width='75%'
+:two-thirds-width: width='66%'
+:half-width: width='50%'
+:half-size:
+:one-thirds-width: width='33%'
+:one-quarters-width: width='25%'
+:thumbnail: width='60'
+:imagesdir: images
+:sourcesdir: codes
+:icons: font
+:hide-uri-scheme!:
+:figure-caption: 図
+:example-caption: リスト
+:table-caption: 表
+:appendix-caption: 付録
+:xrefstyle: short
+:section-refsig:
+:chapter-refsig:
+
+= 実機の組み立て
+
+演習では、LEGO社の Mindstorms EV3（ LEGO, Mindstorms, EV3 は LEGO社の商標です）のキットを使って製作したロボットを使います。
+
+
+[NOTE]
+--
+この演習は、グループで実施します。
+--
+== 【準備】演習に使うものを揃える
+
+. TAから、EV3のキットを受け取ってください。
+. 共有ドライブから、 `組立手順書.zip` を入手します。
+. 「オートライド組立手順書.pdf」を開きます。
+. （組み立てている間に）EV3本体とDCアダプターを接続して、バッテリーを充電しておきます。
+** 少なくとも緑ランプが点灯している状態になるまで。
+. （組み立てている間に）micro SD Cardを初期化してもらいます。
+** micro SD CardをSDカードソケットに入れた状態で、TAに渡します。
+** 初期化が終わったSDカードを受け取ります。
+
+== 【演習】実機を組み立てる
+
+. 「オートライド組立手順書.pdf」を開きます。
+. この手順書の中で指示されたそれぞれの組立手順書を使ってユニットを組み立てます。
+. 組み立てたユニットをドライブベースに組み込む「前の」写真を `images` ディレクトリにアップします。
+** アップするときは、下記のファイル名に合わせてアップしましす。
+. `git add ファイル名` を使って、アップしたファイルをリポジトリに追加します。
+. 各々の写真がこの文書に反映されたのを確認したら、コミットします。
+** コミットには、 `git commit ファイル名 -m コミットメッセージ` を使います。
+
+.完成したキューボイド
+image::cuboid.jpg[{half-width}]
+
+.完成したドライブベース
+image::drive_base.jpg[{full-width}]
+
+.超音波センサーユニット（側壁監視部）
+image::ultrasonic_sensor.jpg[{half-width}]
+
+.ホルダーアーム
+image::holder_arm.jpg[{full-width}]
+
+.カラーセンサーユニット（ライン監視部）
+image::color_sensor.jpg[{half-width}]
+
+.キャリア（座席）
+image::carrier.jpg[{half-width}]
+
+.バンパー
+image::bumper.jpg[{half-width}]
+
+
+== ロボットの完成
+
+. ドライブベースにそれぞれのユニットにを装着します。
+** 超音波センサーユニットは、「側壁監視部取付手順書」に合わせて取り付けます。
+** バンパーは、「バンパー組立手順書」に合わせて取り付けます。
+. 組み立てた写真を `images` ディレクトリにアップします。
+** 写真がこの文書に反映されたのを確認したら、コミットします。
+. `git status` を使って、追加忘れ、コミット忘れがないか確認します。
+. `git push` を使って、リポジトリをpushします。
+. pushが成功したか、GitHubのリポジトリをみて確認します。
+
+.完成したロボット（オートライド）
+image::auto_ride.jpg[{full-width}]
+
+
+== 動作確認
+. 「ev3-cheat-sheet.pdf」をみて、電源のON/OFF方法、ファイルの転送方法を確認しておきます。
+. TAから配布データのはいったSDカードを受け取ります。
+. SDカードからmicro SDカードを取り出し、EV3本体のカードスロットへ挿入します。
+. 真ん中のボタンを押して、電源をONにします。
+. 起動画面が表示されたら、メニューから「sample00」を選んで実行します。
+** ２秒前進して停止したら、OKです。
